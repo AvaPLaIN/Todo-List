@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg, #dabc5a, #e08c75);
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+select {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  outline: none;
+  border: none;
+}
+
+header {
+  font-size: 1.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 20vh;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.todo {
+  min-height: 80vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 3rem;
+  padding: 5rem 0;
+}
+
+.todo .todo-form {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.todo .todo-form .todo-input {
+  min-width: 150px;
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-top-left-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  overflow: visible;
+}
+
+.todo .todo-form .todo-input:focus {
+  outline: none;
+}
+
+.todo .todo-form .todo-input:focus::-webkit-input-placeholder {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+}
+
+.todo .todo-form .todo-input:focus:-ms-input-placeholder {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  transform: translateX(110%);
+}
+
+.todo .todo-form .todo-input:focus::-ms-input-placeholder {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  transform: translateX(110%);
+}
+
+.todo .todo-form .todo-input:focus::placeholder {
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-transform: translateX(110%);
+          transform: translateX(110%);
+}
+
+.todo .todo-form .todo-button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+  color: #e08c75;
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+}
+
+.todo .todo-form .todo-button:hover {
+  background: #e08c75;
+  color: white;
+}
+
+.todo .todo-form .select {
+  margin-left: 1px;
+  position: relative;
+}
+
+.todo .todo-form .select select {
+  padding: 0.5rem;
+  font-size: 2rem;
+  padding-left: 1rem;
+  padding-right: 3.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo .todo-form .select::before {
+  content: "\25BC";
+  position: absolute;
+  right: 0;
+  background: white;
+  color: #e08c75;
+  height: 100%;
+  padding: 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.todo .todo-form .select:hover::before {
+  background: #e08c75;
+  color: white;
+}
+
+.todo .todo-list {
+  min-width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1rem;
+  list-style: none;
+}
+
+.todo .todo-list .todo-element {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  color: black;
+  font-size: 1.5rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.todo .todo-list .todo-element .todo-item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding-right: 0.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  word-break: break-all;
+}
+
+.todo .todo-list .todo-element .todo-complete,
+.todo .todo-list .todo-element .todo-trash {
+  padding: 1rem;
+  background: #ff6f47;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.todo .todo-list .todo-element .fa-check,
+.todo .todo-list .todo-element .fa-trash {
+  pointer-events: none;
+}
+
+.todo .todo-list .todo-element .todo-complete {
+  background: green;
+}
+
+.todo .todo-list .todo-element:hover {
+  font-size: 2rem;
+}
+
+.todo .todo-list .todo-element:hover .todo-complete,
+.todo .todo-list .todo-element:hover .todo-trash {
+  padding: 1.5rem;
+}
+
+.completed {
+  opacity: 0.5;
+  text-decoration: line-through;
+  -webkit-transform: translateX(5%);
+          transform: translateX(5%);
+}
+
+.deleted {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 0;
+}
+/*# sourceMappingURL=style.css.map */
